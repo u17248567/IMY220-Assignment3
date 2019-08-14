@@ -46,14 +46,14 @@
 								<tr>
 							</table>";
 				
-					echo 	"<form enctype='multipart/form-data' method='POST'>
-								<div class='form-group'>
-									<input type='file' class='form-control' name='picToUpload[]' id='picToUpload' multiple='multiple'/><br/>
-									<input type='submit' class='btn btn-standard' value='Upload Image' name='submit' />
-									<input type='hidden' value='$email' name='loginName'/>
-                                    <input type='hidden' value='$pass' name='loginPassw'/>
+					echo 	'<form enctype="multipart/form-data" method="POST">
+								<div class="form-group">
+									<input type="file" class="form-control" name="picToUpload[]" id="picToUpload" multiple="multiple"/><br/>
+									<input type="submit" class="btn btn-standard" value="Upload Image" name="submit" />
+									<input type="hidden" value="$email" name="loginName"/>
+                                    <input type="hidden" value="$pass" name="loginPassw"/>
 								</div>
-						  	</form>";
+						  	</form>';
 
 
 					$user_id = $row['user_id'];
@@ -89,7 +89,7 @@
                     }
                     
                     $query = "SELECT * FROM tbgallery WHERE user_id = '$user_id'";
-                    $jmage_result = $mysqli->query($query);
+                    $jimage_result = $mysqli->query($query);
                         
                         echo '<div class="row imageGallery">'; 
                                     while($jimgrow = mysqli_fetch_array($jimage_result))
